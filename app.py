@@ -31,14 +31,16 @@ if layout_type == "Office":
     }
     # st.write("In Offfice Layout")
 else:
-    # base_image = Image.open("assets/datacenter/floorplan.png")
-    # asset_paths = {
-    #     "Rack": "assets/datacenter/rack.png",
-    #     "Server": "assets/datacenter/server.png",
-    #     "Patch Panel": "assets/datacenter/patch_panel.png",
-    #     "Switch": "assets/datacenter/switch.png"
-    # }
+    base_image = Image.open("assets/datacenter/floorplan.png")
+    asset_paths = {
+        "Rack": "assets/datacenter/rack.png",
+        "Server": "assets/datacenter/server.png",
+        "Patch Panel": "assets/datacenter/patch_panel.png",
+        "Switch": "assets/datacenter/switch.png"
+    }
     st.write("In Else Part")
+st.image(base_image, caption="Floorplan Preview", use_column_width=True)
+
 # Canvas widget
 # canvas_result = st_canvas(
 #     background_image=base_image,
