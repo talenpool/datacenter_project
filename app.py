@@ -23,21 +23,21 @@ if layout_type == "Office":
     #     st.warning("Could not load floorplan image - assets/office/floorplan.png. Using placeholder.")
 
     base_image = Image.open("assets/office/floorplan.png")
-    asset_paths = {
-        "Desk": "assets/office/desk.png",
-        "Computer": "assets/office/computer.png",
-        "Printer": "assets/office/printer.png",
-        "Telephone": "assets/office/telephone.png"
-    }
+    # asset_paths = {
+    #     "Desk": "assets/office/desk.png",
+    #     "Computer": "assets/office/computer.png",
+    #     "Printer": "assets/office/printer.png",
+    #     "Telephone": "assets/office/telephone.png"
+    # }
     # st.write("In Offfice Layout")
 else:
     base_image = Image.open("assets/datacenter/floorplan.png")
-    asset_paths = {
-        "Rack": "assets/datacenter/rack.png",
-        "Server": "assets/datacenter/server.png",
-        "Patch Panel": "assets/datacenter/patch_panel.png",
-        "Switch": "assets/datacenter/switch.png"
-    }
+    # asset_paths = {
+    #     "Rack": "assets/datacenter/rack.png",
+    #     "Server": "assets/datacenter/server.png",
+    #     "Patch Panel": "assets/datacenter/patch_panel.png",
+    #     "Switch": "assets/datacenter/switch.png"
+    # }
     # st.write("In Else Part")
 
 # from PIL import Image
