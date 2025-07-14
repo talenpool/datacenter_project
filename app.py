@@ -4,7 +4,7 @@ import streamlit as st
 from PIL import Image
 import json
 from streamlit_drawable_canvas import st_canvas
-
+import numpy as np
 # Page layout
 st.set_page_config(layout="wide")
 st.title("Interactive Layout Mapping App")
@@ -62,7 +62,7 @@ else:
 
 placeholder = Image.new("RGBA", (1000, 600), color="lightgray")
 
-import numpy as np
+
 # Convert to NumPy array
 # base_array = np.array(base_image)
 
