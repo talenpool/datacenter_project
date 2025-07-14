@@ -39,6 +39,22 @@ else:
         "Switch": "assets/datacenter/switch.png"
     }
     # st.write("In Else Part")
+
+from PIL import Image
+from streamlit_drawable_canvas import st_canvas
+
+placeholder = Image.new("RGBA", (1000, 600), color="lightgray")
+
+canvas_result = st_canvas(
+    background_image=placeholder,
+    update_streamlit=True,
+    height=600,
+    width=1000,
+    drawing_mode="transform",
+    key="canvas"
+)
+
+
 # st.image(base_image, caption="Floorplan Preview", use_column_width=True)
 
 # test_image = Image.new("RGBA", (1000, 600), color="lightgray")
@@ -68,14 +84,14 @@ else:
 #     key=f"{layout_type}_canvas"
 # )
 
-canvas_result = st_canvas(
-    background_image=base_image,
-    update_streamlit=True,
-    height=600,
-    width=1000,
-    drawing_mode="transform",
-    key="canvas"
-)
+# canvas_result = st_canvas(
+#     background_image=base_image,
+#     update_streamlit=True,
+#     height=600,
+#     width=1000,
+#     drawing_mode="transform",
+#     key="canvas"
+# )
 
 # # Asset selection
 # selected_asset = st.selectbox("Choose Asset to Place", list(asset_paths.keys()))
