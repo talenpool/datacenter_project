@@ -4,7 +4,7 @@ import streamlit as st
 from PIL import Image
 import json
 from streamlit_drawable_canvas import st_canvas
-import numpy as np
+# import numpy as np
 # Page layout
 st.set_page_config(layout="wide")
 st.title("Interactive Layout Mapping App")
@@ -16,18 +16,18 @@ layout_type = st.selectbox("Choose Layout Mode", ["Office", "Data Center"])
 base_image = Image.open("assets/office/floorplan.png").convert("RGBA")
 base_image = base_image.resize((1000, 600))
 
-# Convert to NumPy array
-base_array = np.array(base_image)
+# # Convert to NumPy array
+# base_array = np.array(base_image)
 
-# Pass to canvas
-canvas_result = st_canvas(
-    background_image=base_array,
-    update_streamlit=True,
-    height=600,
-    width=1000,
-    drawing_mode="transform",
-    key="canvas"
-)
+# # Pass to canvas
+# canvas_result = st_canvas(
+#     background_image=base_array,
+#     update_streamlit=True,
+#     height=600,
+#     width=1000,
+#     drawing_mode="transform",
+#     key="canvas"
+# )
 
 # Load correct layout and assets
 if layout_type == "Office":
