@@ -31,7 +31,7 @@ if layout_type == "Office":
     # }
     # st.write("In Offfice Layout")
 else:
-    base_image = Image.open("assets/datacenter/floorplan.png")
+    base_image = Image.open("assets/datacenter/test888.png")
     # asset_paths = {
     #     "Rack": "assets/datacenter/rack.png",
     #     "Server": "assets/datacenter/server.png",
