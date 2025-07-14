@@ -39,7 +39,7 @@ else:
         "Switch": "assets/datacenter/switch.png"
     }
     st.write("In Else Part")
-st.image(base_image, caption="Floorplan Preview", use_column_width=True)
+# st.image(base_image, caption="Floorplan Preview", use_column_width=True)
 
 # Canvas widget
 canvas_result = st_canvas(
