@@ -45,8 +45,12 @@ else:
 
 placeholder = Image.new("RGBA", (1000, 600), color="lightgray")
 
+import numpy as np
+# Convert to NumPy array
+base_array = np.array(base_image)
+
 canvas_result = st_canvas(
-    background_image=base_image,
+    background_image=base_array,
     update_streamlit=True,
     height=600,
     width=1000,
