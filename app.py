@@ -40,16 +40,16 @@ else:
     }
     # st.write("In Else Part")
 
-from PIL import Image
-from streamlit_drawable_canvas import st_canvas
+# from PIL import Image
+# from streamlit_drawable_canvas import st_canvas
 
 placeholder = Image.new("RGBA", (1000, 600), color="lightgray")
 
 canvas_result = st_canvas(
     background_image=placeholder,
     update_streamlit=True,
-    height=600,
-    width=1000,
+    height=1200,
+    width=1500,
     drawing_mode="transform",
     key="canvas"
 )
