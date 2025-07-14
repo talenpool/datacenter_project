@@ -48,8 +48,8 @@ placeholder = Image.new("RGBA", (1000, 600), color="lightgray")
 canvas_result = st_canvas(
     background_image=placeholder,
     update_streamlit=True,
-    height=1200,
-    width=1500,
+    height=600,
+    width=1000,
     drawing_mode="transform",
     key="canvas"
 )
