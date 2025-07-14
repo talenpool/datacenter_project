@@ -38,7 +38,7 @@ else:
         "Patch Panel": "assets/datacenter/patch_panel.png",
         "Switch": "assets/datacenter/switch.png"
     }
-    st.write("In Else Part")
+    # st.write("In Else Part")
 # st.image(base_image, caption="Floorplan Preview", use_column_width=True)
 
 # test_image = Image.new("RGBA", (1000, 600), color="lightgray")
