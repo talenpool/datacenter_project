@@ -16,11 +16,11 @@ layout_type = st.selectbox("Choose Layout Mode", ["Office", "Data Center"])
 if layout_type == "Office":
 
     # Image.open("assets/office/ren_floorplan.png").show()
-    try:
-        base_image = Image.open("assets/office/floorplan.png")
-    except Exception:
-        base_image = Image.new("RGB", (1000, 600), color="gray")
-        st.warning("Could not load floorplan image - assets/office/floorplan.png. Using placeholder.")
+    # try:
+    #     base_image = Image.open("assets/office/floorplan.png")
+    # except Exception:
+    #     base_image = Image.new("RGB", (1000, 600), color="gray")
+    #     st.warning("Could not load floorplan image - assets/office/floorplan.png. Using placeholder.")
 
     base_image = Image.open("assets/office/floorplan.png")
     asset_paths = {
@@ -55,7 +55,7 @@ else:
 # )
 
 base_image = Image.open("assets/office/floorplan.png").convert("RGBA")
-base_image = base_image.resize((600, 1000))  # Match canvas size
+base_image = base_image.resize((1000, 600))  # Match canvas size
 
 # Canvas widget
 canvas_result = st_canvas(
