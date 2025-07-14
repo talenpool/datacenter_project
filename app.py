@@ -17,7 +17,7 @@ if layout_type == "Office":
 
     # Image.open("assets/office/ren_floorplan.png").show()
     try:
-        base_image = Image.open("assets/office/floorplan.png")
+        base_image = Image.open("assets/office/floorplan.jpeg")
     except Exception:
         base_image = Image.new("RGB", (1000, 600), color="gray")
         st.warning("Could not load floorplan image. Using placeholder.")
