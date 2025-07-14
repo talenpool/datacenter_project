@@ -41,16 +41,16 @@ else:
     st.write("In Else Part")
 st.image(base_image, caption="Floorplan Preview", use_column_width=True)
 
-# Canvas widget
-# canvas_result = st_canvas(
-#     background_image=base_image,
-#     stroke_width=1,
-#     drawing_mode="transform",
-#     height=600,
-#     width=1000,
-#     update_streamlit=True,
-#     key=f"{layout_type}_canvas"
-# )
+Canvas widget
+canvas_result = st_canvas(
+    background_image=base_image,
+    stroke_width=1,
+    drawing_mode="transform",
+    height=600,
+    width=1000,
+    update_streamlit=True,
+    key=f"{layout_type}_canvas"
+)
 
 # # Asset selection
 # selected_asset = st.selectbox("Choose Asset to Place", list(asset_paths.keys()))
