@@ -46,7 +46,7 @@ else:
 placeholder = Image.new("RGBA", (1000, 600), color="lightgray")
 
 canvas_result = st_canvas(
-    background_image=placeholder,
+    background_image=base_image,
     update_streamlit=True,
     height=600,
     width=1000,
