@@ -17,10 +17,10 @@ if layout_type == "Office":
 
     # Image.open("assets/office/ren_floorplan.png").show()
     try:
-        base_image = Image.open("assets/office/ren_floorplan.png")
-    except Exception as e:
-        st.error("Could not load floorplan image.")
-        st.stop()
+        base_image = Image.open("assets/office/floorplan.png")
+    except Exception:
+        base_image = Image.new("RGB", (1000, 600), color="gray")
+        st.warning("Could not load floorplan image. Using placeholder.")
 
     # base_image = Image.open("assets/office/floorplan.png")
     # asset_paths = {
