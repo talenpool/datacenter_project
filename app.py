@@ -32,34 +32,34 @@ else:
     # }
     st.write("In Else Part")
 # Canvas widget
-canvas_result = st_canvas(
-    # background_image=base_image,
-    stroke_width=1,
-    drawing_mode="transform",
-    height=600,
-    width=1000,
-    update_streamlit=True,
-    key=f"{layout_type}_canvas"
-)
+# canvas_result = st_canvas(
+#     background_image=base_image,
+#     stroke_width=1,
+#     drawing_mode="transform",
+#     height=600,
+#     width=1000,
+#     update_streamlit=True,
+#     key=f"{layout_type}_canvas"
+# )
 
-# Asset selection
-selected_asset = st.selectbox("Choose Asset to Place", list(asset_paths.keys()))
-uploaded_asset = Image.open(asset_paths[selected_asset])
-st.image(uploaded_asset, caption=f"{selected_asset} Preview", width=150)
+# # Asset selection
+# selected_asset = st.selectbox("Choose Asset to Place", list(asset_paths.keys()))
+# uploaded_asset = Image.open(asset_paths[selected_asset])
+# st.image(uploaded_asset, caption=f"{selected_asset} Preview", width=150)
 
-# Save asset positions
-if st.button("Save Asset Positions"):
-    with open("data/asset_positions.json", "w") as f:
-        json.dump(canvas_result.json_data["objects"], f)
-    st.success("Asset positions saved.")
+# # Save asset positions
+# if st.button("Save Asset Positions"):
+#     with open("data/asset_positions.json", "w") as f:
+#         json.dump(canvas_result.json_data["objects"], f)
+#     st.success("Asset positions saved.")
 
-# Export layout view
-if st.button("Export as Image"):
-    from matplotlib import pyplot as plt
-    fig, ax = plt.subplots()
-    ax.imshow(base_image)
-    for obj in canvas_result.json_data.get("objects", []):
-        ax.text(obj["left"], obj["top"], obj["type"])
-    ax.axis("off")
-    plt.savefig("exported_layout.png", bbox_inches="tight")
-    st.success("Layout exported as exported_layout.png")
+# # Export layout view
+# if st.button("Export as Image"):
+#     from matplotlib import pyplot as plt
+#     fig, ax = plt.subplots()
+#     ax.imshow(base_image)
+#     for obj in canvas_result.json_data.get("objects", []):
+#         ax.text(obj["left"], obj["top"], obj["type"])
+#     ax.axis("off")
+#     plt.savefig("exported_layout.png", bbox_inches="tight")
+#     st.success("Layout exported as exported_layout.png")
