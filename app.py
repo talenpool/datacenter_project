@@ -33,7 +33,7 @@ else:
     st.write("In Else Part")
 # Canvas widget
 canvas_result = st_canvas(
-    background_image=base_image,
+    # background_image=base_image,
     stroke_width=1,
     drawing_mode="transform",
     height=600,
