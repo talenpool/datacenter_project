@@ -41,25 +41,11 @@ else:
     st.write("In Else Part")
 # st.image(base_image, caption="Floorplan Preview", use_column_width=True)
 
-test_image = Image.new("RGBA", (1000, 600), color="lightgray")
-
-# Canvas widget
-canvas_result = st_canvas(
-    background_image=test_image,
-    stroke_width=1,
-    drawing_mode="transform",
-    height=600,
-    width=1000,
-    update_streamlit=True,
-    key=f"{layout_type}_canvas"
-)
-
-# base_image = Image.open("assets/office/floorplan.png").convert("RGBA")
-# base_image = base_image.resize((1000, 600))  # Match canvas size
+# test_image = Image.new("RGBA", (1000, 600), color="lightgray")
 
 # # Canvas widget
 # canvas_result = st_canvas(
-#     background_image=base_image,
+#     background_image=test_image,
 #     stroke_width=1,
 #     drawing_mode="transform",
 #     height=600,
@@ -67,6 +53,20 @@ canvas_result = st_canvas(
 #     update_streamlit=True,
 #     key=f"{layout_type}_canvas"
 # )
+
+base_image = Image.open("assets/office/floorplan.png").convert("RGBA")
+base_image = base_image.resize((1000, 600))  # Match canvas size
+
+# Canvas widget
+canvas_result = st_canvas(
+    background_image=base_image,
+    stroke_width=1,
+    drawing_mode="transform",
+    height=600,
+    width=1000,
+    update_streamlit=True,
+    key=f"{layout_type}_canvas"
+)
 
 # # Asset selection
 # selected_asset = st.selectbox("Choose Asset to Place", list(asset_paths.keys()))
