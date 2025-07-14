@@ -14,13 +14,13 @@ layout_type = st.selectbox("Choose Layout Mode", ["Office", "Data Center"])
 
 # Load correct layout and assets
 if layout_type == "Office":
-    # base_image = Image.open("assets/office/floorplan.png")
-    # asset_paths = {
-    #     "Desk": "assets/office/desk.png",
-    #     "Computer": "assets/office/computer.png",
-    #     "Printer": "assets/office/printer.png",
-    #     "Telephone": "assets/office/telephone.png"
-    # }
+    base_image = Image.open("assets/office/floorplan.png")
+    asset_paths = {
+        "Desk": "assets/office/desk.png",
+        "Computer": "assets/office/computer.png",
+        "Printer": "assets/office/printer.png",
+        "Telephone": "assets/office/telephone.png"
+    }
     st.write("In Offfice Layout")
 else:
     # base_image = Image.open("assets/datacenter/floorplan.png")
