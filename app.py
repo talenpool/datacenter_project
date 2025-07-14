@@ -15,7 +15,7 @@ layout_type = st.selectbox("Choose Layout Mode", ["Office", "Data Center"])
 # Load correct layout and assets
 if layout_type == "Office":
 
-    Image.open("assets/office/floorplan.png").show()
+    Image.open("assets/office/ren_floorplan.png").show()
     # base_image = Image.open("assets/office/floorplan.png")
     # asset_paths = {
     #     "Desk": "assets/office/desk.png",
