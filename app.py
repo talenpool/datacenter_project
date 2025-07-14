@@ -54,8 +54,8 @@ else:
 #     key=f"{layout_type}_canvas"
 # )
 
-base_image = Image.open("assets/office/floorplan.png").convert("RGBA")
-base_image = base_image.resize((1000, 600))  # Match canvas size
+# base_image = Image.open("assets/office/floorplan.png").convert("RGBA")
+# base_image = base_image.resize((1000, 600))  # Match canvas size
 
 # Canvas widget
 canvas_result = st_canvas(
