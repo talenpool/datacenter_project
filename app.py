@@ -12,6 +12,23 @@ st.title("Interactive Layout Mapping App")
 # Choose layout type
 layout_type = st.selectbox("Choose Layout Mode", ["Office", "Data Center"])
 
+# Load and resize image
+base_image = Image.open("assets/office/floorplan.png").convert("RGBA")
+base_image = base_image.resize((1000, 600))
+
+# Convert to NumPy array
+base_array = np.array(base_image)
+
+# Pass to canvas
+canvas_result = st_canvas(
+    background_image=base_array,
+    update_streamlit=True,
+    height=600,
+    width=1000,
+    drawing_mode="transform",
+    key="canvas"
+)
+
 # Load correct layout and assets
 if layout_type == "Office":
 
@@ -47,10 +64,10 @@ placeholder = Image.new("RGBA", (1000, 600), color="lightgray")
 
 import numpy as np
 # Convert to NumPy array
-base_array = np.array(base_image)
+# base_array = np.array(base_image)
 
 canvas_result = st_canvas(
-    background_image=base_array,
+    background_image=base_image,
     update_streamlit=True,
     height=600,
     width=1000,
