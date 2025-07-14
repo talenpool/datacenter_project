@@ -76,7 +76,7 @@ canvas_result = st_canvas(
 )
 
 
-st.image(base_image, caption="Floorplan Preview", use_column_width=True)
+# st.image(base_image, caption="Floorplan Preview", use_column_width=True)
 
 # test_image = Image.new("RGBA", (1000, 600), color="lightgray")
 
