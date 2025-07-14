@@ -41,7 +41,7 @@ else:
     st.write("In Else Part")
 st.image(base_image, caption="Floorplan Preview", use_column_width=True)
 
-Canvas widget
+# Canvas widget
 canvas_result = st_canvas(
     background_image=base_image,
     stroke_width=1,
