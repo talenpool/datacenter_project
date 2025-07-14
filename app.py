@@ -58,14 +58,23 @@ else:
 # base_image = base_image.resize((1000, 600))  # Match canvas size
 
 # Canvas widget
+# canvas_result = st_canvas(
+#     background_image=base_image,
+#     stroke_width=1,
+#     drawing_mode="transform",
+#     height=600,
+#     width=1000,
+#     update_streamlit=True,
+#     key=f"{layout_type}_canvas"
+# )
+
 canvas_result = st_canvas(
     background_image=base_image,
-    stroke_width=1,
-    drawing_mode="transform",
+    update_streamlit=True,
     height=600,
     width=1000,
-    update_streamlit=True,
-    key=f"{layout_type}_canvas"
+    drawing_mode="transform",
+    key="canvas"
 )
 
 # # Asset selection
