@@ -22,14 +22,14 @@ if layout_type == "Office":
         base_image = Image.new("RGB", (1000, 600), color="gray")
         st.warning("Could not load floorplan image - assets/office/floorplan.png. Using placeholder.")
 
-    # base_image = Image.open("assets/office/floorplan.png")
-    # asset_paths = {
-    #     "Desk": "assets/office/desk.png",
-    #     "Computer": "assets/office/computer.png",
-    #     "Printer": "assets/office/printer.png",
-    #     "Telephone": "assets/office/telephone.png"
-    # }
-    st.write("In Offfice Layout")
+    base_image = Image.open("assets/office/floorplan.png")
+    asset_paths = {
+        "Desk": "assets/office/desk.png",
+        "Computer": "assets/office/computer.png",
+        "Printer": "assets/office/printer.png",
+        "Telephone": "assets/office/telephone.png"
+    }
+    # st.write("In Offfice Layout")
 else:
     # base_image = Image.open("assets/datacenter/floorplan.png")
     # asset_paths = {
