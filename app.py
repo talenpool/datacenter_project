@@ -9,6 +9,29 @@ from streamlit_drawable_canvas import st_canvas
 st.set_page_config(layout="wide")
 st.title("Interactive Layout Mapping App")
 
+# import streamlit as st
+# from PIL import Image
+# from streamlit_drawable_canvas import st_canvas
+
+st.title("Canvas Test with Uploaded Image")
+
+uploaded_file = st.file_uploader("Upload a floorplan image", type=["png", "jpg", "jpeg"])
+if uploaded_file:
+    base_image = Image.open(uploaded_file).convert("RGBA")
+    base_image = base_image.resize((1000, 600))
+
+    canvas_result = st_canvas(
+        background_image=base_image,
+        update_streamlit=True,
+        height=600,
+        width=1000,
+        drawing_mode="transform",
+        key="canvas"
+    )
+else:
+    st.warning("Please upload a valid image to test the canvas.")
+
+
 # Choose layout type
 layout_type = st.selectbox("Choose Layout Mode", ["Office", "Data Center"])
 
