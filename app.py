@@ -13,8 +13,8 @@ st.title("Interactive Layout Mapping App")
 layout_type = st.selectbox("Choose Layout Mode", ["Office", "Data Center"])
 
 # Load and resize image
-base_image = Image.open("assets/office/floorplan.png").convert("RGBA")
-base_image = base_image.resize((1000, 600))
+# base_image = Image.open("assets/office/floorplan.png").convert("RGBA")
+# base_image = base_image.resize((1000, 600))
 
 # # Convert to NumPy array
 # base_array = np.array(base_image)
@@ -39,7 +39,11 @@ if layout_type == "Office":
     #     base_image = Image.new("RGB", (1000, 600), color="gray")
     #     st.warning("Could not load floorplan image - assets/office/floorplan.png. Using placeholder.")
 
-    base_image = Image.open("assets/office/test123.png")
+    #from PIL import Image
+    base_image = Image.open("assets/office/test123.png").convert("RGBA")
+    base_image = base_image.resize((1000, 600))  # Match canvas size
+
+    # base_image = Image.open("assets/office/test123.png")
     # asset_paths = {
     #     "Desk": "assets/office/desk.png",
     #     "Computer": "assets/office/computer.png",
@@ -48,7 +52,11 @@ if layout_type == "Office":
     # }
     # st.write("In Offfice Layout")
 else:
-    base_image = Image.open("assets/datacenter/test888.png")
+
+    base_image = Image.open("assets/office/test888.png").convert("RGBA")
+    base_image = base_image.resize((1000, 600))  # Match canvas size
+
+    # base_image = Image.open("assets/datacenter/test888.png")
     # asset_paths = {
     #     "Rack": "assets/datacenter/rack.png",
     #     "Server": "assets/datacenter/server.png",
